@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Image Compressor</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
   </head>
   <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-md">
@@ -54,7 +54,7 @@
         status.innerText = "Processing...";
 
         try {
-          const res = await fetch("http://localhost:3000/compress", {
+          const res = await fetch("/compress", {
             method: "POST",
             body: formData,
           });
