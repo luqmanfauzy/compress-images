@@ -7,7 +7,6 @@ import archiver from 'archiver';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import pLimit from 'p-limit';
-import fs from 'fs';
 
 // ===== INIT =====
 const app = express();
