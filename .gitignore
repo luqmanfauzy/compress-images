@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Upload & output (temporary files)
+uploads/
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Package lock (optional, tapi biasanya tetap disimpan)
+# package-lock.json
+
+# Temp files
+*.tmp
+*.temp
