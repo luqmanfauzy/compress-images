@@ -7,6 +7,7 @@ import archiver from 'archiver';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import pLimit from 'p-limit';
+import fs from 'fs';
 
 // ===== INIT =====
 const app = express();
@@ -14,6 +15,15 @@ app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// ===== BUAT FOLDER JIKA BELUM ADA =====
+['uploads', 'output'].forEach(dir => {
+  const fullPath = path.join(__dirname, dir);
+
+  if (!fs.existsSync(fullPath)) {
+    fs.mkdirSync(fullPath, { recursive: true });
+  }
+});
 
 // serve frontend
 app.use(express.static(path.join(__dirname, 'public')));
